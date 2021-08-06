@@ -156,3 +156,9 @@ button p {
 /*End Authors*/
 
 /*           END POPSUPS          */
+
+/* Timer styles */
+.timerContainer {
+  margin-block-start: 100px;
+  background: white;
+}
