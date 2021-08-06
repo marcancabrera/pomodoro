@@ -1,15 +1,77 @@
 @import url(/styles/index.css);
 body {
   background: var(--background-color-main-1);
+  font-family: var(--font-family);
+  margin: 0px;
 }
 
+/*           HEADER             */
 
+header {
+  background: inherit;
+  height: 60px;
+  width: 620px;
+  display: flex;
+  padding: 0px 12px;
+  margin: 0px auto;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 0.2px solid rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+}
 
+header a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  margin-left: 4px;
+  font-weight: bold;
+}
+
+header h1 {
+  margin: 0px;
+}
+
+header img {
+  font-size: 0px;
+  margin: 0px;
+}
+
+header span {
+  display: flex;
+  align-items: center;
+}
+
+header button {
+  height: 32px;
+  width: 85px;
+  display: flex;
+  background: rgba(255, 255, 255, 0.3);
+  margin: 0px 5px;
+  border-radius: 4px;
+  border: 0px;
+  color: white;
+  font-size: 13px;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.headButtonInfo{
+  width: 110px;
+}
+
+button p {
+  margin: 0;
+}
+
+/*          ENDHEADER           */
 
 /*           POPUPS             */
 
 /*Help*/
-.infoOverlay{
+
+.infoOverlay {
   background: rgba(0, 0, 0, 0.3);
   position: fixed;
   top: 0;
@@ -22,30 +84,32 @@ body {
   visibility: hidden;
 }
 
-.infoOverlay.active{
+.infoOverlay.active {
   visibility: visible;
 }
 
-.infoPopup{
+.infoPopup {
   background: #f8f8f8;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
   border-radius: 5px;
   padding: 20px;
   width: 600px;
   height: 600px;
-  overflow-y:  scroll;
+  overflow-y: scroll;
 }
 
-.infoPopupCerrar{
+.infoPopupCerrar {
   font-size: 16px;
   line-height: 16px;
-  display:  block;
+  display: block;
   text-align: right;
 }
+
 /*End Help*/
 
 /*Authors*/
-.authorOverlay{
+
+.authorOverlay {
   background: rgba(0, 0, 0, 0.3);
   position: fixed;
   top: 0;
@@ -58,38 +122,37 @@ body {
   visibility: hidden;
 }
 
-.authorOverlay.active{
+.authorOverlay.active {
   visibility: visible;
 }
 
-.authorPopup{
+.authorPopup {
   background: #f8f8f8;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
   border-radius: 5px;
   padding: 20px;
   width: 600px;
   height: 600px;
-
 }
 
-.authorPopupMain{
+.authorPopupMain {
   display: flex;
   flex-direction: row;
 }
 
-.authorPopupCerrar{
+.authorPopupCerrar {
   font-size: 16px;
   line-height: 16px;
-  display:  block;
+  display: block;
   text-align: right;
 }
 
-.author{
-  margin:0px 50px;
+.author {
+  margin: 0px 50px;
   text-align: center;
   height: 80%;
-
 }
+
 /*End Authors*/
 
 /*           END POPSUPS          */

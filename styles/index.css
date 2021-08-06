@@ -1,5 +1,20 @@
 /* VARIABLES */
 
+@font-face {
+  font-family: 'ArialRounded';
+  font-display: swap;
+  src: url('/assets/fonts/arial-rounded.ttf')
+    format('truetype');
+  }
+
+  @font-face {
+    font-family: 'ArialRounded';
+    font-display: swap;
+    src: url('/assets/fonts/Arial_Rounded_Bold.ttf')
+      format('truetype');
+    font-weight: bold;
+    }
+
 :root {
     --background-color-main-1: #db524d;
     --background-color-main-2: #437ea8;
