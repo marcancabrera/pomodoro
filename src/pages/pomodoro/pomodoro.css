@@ -1,0 +1,95 @@
+@import url(/styles/index.css);
+body {
+  background: var(--background-color-main-1);
+}
+
+
+
+
+/*           POPUPS             */
+
+/*Help*/
+.infoOverlay{
+  background: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+}
+
+.infoOverlay.active{
+  visibility: visible;
+}
+
+.infoPopup{
+  background: #f8f8f8;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  padding: 20px;
+  width: 600px;
+  height: 600px;
+  overflow-y:  scroll;
+}
+
+.infoPopupCerrar{
+  font-size: 16px;
+  line-height: 16px;
+  display:  block;
+  text-align: right;
+}
+/*End Help*/
+
+/*Authors*/
+.authorOverlay{
+  background: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+}
+
+.authorOverlay.active{
+  visibility: visible;
+}
+
+.authorPopup{
+  background: #f8f8f8;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  padding: 20px;
+  width: 600px;
+  height: 600px;
+
+}
+
+.authorPopupMain{
+  display: flex;
+  flex-direction: row;
+}
+
+.authorPopupCerrar{
+  font-size: 16px;
+  line-height: 16px;
+  display:  block;
+  text-align: right;
+}
+
+.author{
+  margin:0px 50px;
+  text-align: center;
+  height: 80%;
+
+}
+/*End Authors*/
+
+/*           END POPSUPS          */
