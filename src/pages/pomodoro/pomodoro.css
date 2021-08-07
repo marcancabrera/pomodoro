@@ -159,6 +159,23 @@ button p {
 
 /* Timer styles */
 .timerContainer {
+  text-align: center;
   margin-block-start: 100px;
-  background: white;
+  background: var(--color-shadow-grey);
+}
+
+.timerContainer .timerOptions {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  list-style: none;
+}
+
+.timerContainer .timerOptions li {
+  background: var(--color-dark-shadow-1);
+  margin-inline: 10px;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 5px;
 }
