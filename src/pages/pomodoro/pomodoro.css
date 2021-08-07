@@ -3,6 +3,7 @@ body {
   background: var(--background-color-main-1);
   font-family: var(--font-family);
   margin: 0px;
+  color: var(--color-button);
 }
 
 /*           HEADER             */
@@ -57,7 +58,7 @@ header button {
   cursor: pointer;
 }
 
-.headButtonInfo{
+.headButtonInfo {
   width: 110px;
 }
 
@@ -159,9 +160,13 @@ button p {
 
 /* Timer styles */
 .timerContainer {
+  border-radius: 10px;
   text-align: center;
   margin-block-start: 100px;
   background: var(--color-shadow-grey);
+  padding: 20px;
+  width: 25%;
+  margin-inline: auto;
 }
 
 .timerContainer .timerOptions {
@@ -169,6 +174,7 @@ button p {
   justify-content: center;
   text-decoration: none;
   list-style: none;
+  padding: 0px;
 }
 
 .timerContainer .timerOptions li {
@@ -178,4 +184,29 @@ button p {
   font-size: 16px;
   padding: 10px;
   border-radius: 5px;
+}
+
+.timerContainer .timer p {
+  margin: 0;
+}
+
+.timerContainer .timer {
+  font-size: 140px;
+  font-weight: bold;
+}
+
+.timerContainer .timerStart {
+  margin-top: 20px;
+}
+
+.timerContainer .timerStart .startButton{
+  border-radius: 5px;
+  border-style: none;
+  border-bottom: 6px solid var(--color-shadow-button);
+  background: var(--color-button);
+  color: var(--background-color-main-1);
+  font-size: 25px;
+  font-weight: bold;
+  width: 25%;
+  height: 60px;
 }
