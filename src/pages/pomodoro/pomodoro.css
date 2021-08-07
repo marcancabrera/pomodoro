@@ -162,7 +162,7 @@ button p {
 .timerContainer {
   border-radius: 10px;
   text-align: center;
-  margin-block-start: 100px;
+  margin-block-start: 50px;
   background: var(--color-shadow-grey);
   padding: 20px;
   width: 25%;
@@ -175,6 +175,7 @@ button p {
   text-decoration: none;
   list-style: none;
   padding: 0px;
+  margin: 0px
 }
 
 .timerContainer .timerOptions li {
@@ -191,7 +192,7 @@ button p {
 }
 
 .timerContainer .timer {
-  font-size: 140px;
+  font-size: 120px;
   font-weight: bold;
 }
 
@@ -207,6 +208,6 @@ button p {
   color: var(--background-color-main-1);
   font-size: 25px;
   font-weight: bold;
-  width: 25%;
+  width: 45%;
   height: 60px;
 }
