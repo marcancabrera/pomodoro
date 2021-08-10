@@ -6,7 +6,8 @@ var headButtonInfo = document.getElementById('headButtonInfo'),
     authorOverlay = document.getElementById('authorOverlay'),
     authorPopup = document.getElementById('authorPopup'),
     authorPopupCerrar = document.getElementById('authorPopupCerrar'),
-    headButtonAuthor = document.getElementById('headButtonAuthor');
+    headButtonAuthor = document.getElementById('headButtonAuthor'),
+    timerString = document.getElementById('timerString');
 
 
 
@@ -47,6 +48,7 @@ timerOptionsPomodoro.addEventListener('click', function () {
     startButton.classList.add('startButton1');
     startButton.classList.remove('startButton2');
     startButton.classList.remove('startButton3');
+    timerString.innerHTML = "25:00";
 
 
 });
@@ -62,6 +64,7 @@ timerOptionsShortBreak.addEventListener('click', function () {
     startButton.classList.remove('startButton1');
     startButton.classList.add('startButton2');
     startButton.classList.remove('startButton3');
+    timerString.innerHTML = "05:00";
 });
 
 timerOptionsLongBreak.addEventListener('click', function () {
@@ -75,6 +78,7 @@ timerOptionsLongBreak.addEventListener('click', function () {
     startButton.classList.remove('startButton1');
     startButton.classList.remove('startButton2');
     startButton.classList.add('startButton3');
+    timerString.innerHTML = "15:00";
 
 });
 
