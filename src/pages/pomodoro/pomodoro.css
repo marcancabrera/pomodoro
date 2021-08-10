@@ -1,9 +1,22 @@
 @import url(/styles/index.css);
 body {
-  background: var(--background-color-main-1);
   font-family: var(--font-family);
   margin: 0px;
   color: var(--color-button);
+  background-color: var(--background-color-main-1);
+  transition: background-color 0.5s linear;
+}
+
+.main-1 {
+  background-color: var(--background-color-main-1);
+}
+
+.main-2 {
+  background-color: var(--background-color-main-2);
+}
+
+.main-3 {
+  background-color: var(--background-color-main-3);
 }
 
 /*           HEADER             */
@@ -159,11 +172,12 @@ button p {
 /*           END POPSUPS          */
 
 /* Timer styles */
+
 .timerContainer {
   border-radius: 10px;
   text-align: center;
   margin-block-start: 50px;
-  background: var(--color-shadow-grey);
+  background: rgba(255, 255, 255, 0.1);
   padding: 20px;
   width: 25%;
   margin-inline: auto;
@@ -178,15 +192,6 @@ button p {
   margin: 0px
 }
 
-.timerContainer .timerOptions li {
-  background: var(--color-dark-shadow-1);
-  margin-inline: 10px;
-  font-weight: bold;
-  font-size: 16px;
-  padding: 10px;
-  border-radius: 5px;
-}
-
 .timerContainer .timer p {
   margin: 0;
 }
@@ -194,20 +199,53 @@ button p {
 .timerContainer .timer {
   font-size: 120px;
   font-weight: bold;
+  margin-top: 20px;
 }
 
 .timerContainer .timerStart {
   margin-top: 20px;
 }
 
-.timerContainer .timerStart .startButton{
+.timerContainer .timerStart .startButton {
   border-radius: 5px;
   border-style: none;
   border-bottom: 6px solid var(--color-shadow-button);
   background: var(--color-button);
-  color: var(--background-color-main-1);
-  font-size: 25px;
+  transition: color 0.5s linear;
+  font-size: 22px;
   font-weight: bold;
-  width: 45%;
+  width: 200px;
   height: 60px;
 }
+
+.startButton1 {
+  color: var(--background-color-main-1);
+}
+
+.startButton2 {
+  color: var(--background-color-main-2);
+}
+
+.startButton3 {
+  color: var(--background-color-main-3);
+}
+
+.timerContainer .timerOptions .timerOptionsButton {
+  background-color: rgba(0, 0, 0, 0);
+  border: 0px;
+  margin: 0px;
+  color: white;
+  font-size: 17px;
+  background: rgba(0, 0, 0, 0);
+  margin-inline: 0px;
+  padding: 2px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.buttonSelected {
+  background-color: rgba(0, 0, 0, 0.15) !important;
+  font-weight: bold;
+}
+
+/****************/

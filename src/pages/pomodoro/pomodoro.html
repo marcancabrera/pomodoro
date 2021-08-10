@@ -8,7 +8,7 @@
 
 </head>
 
-<body>
+<body id = "body" class="main-1">
   <header>
     <h1 class="headTitle">
       <img src="https://i.ibb.co/0h4Nr8R/icon-white.png" height="20px" alt="simboloCheck">
@@ -33,16 +33,19 @@
 
   <section>
     <div class="timerContainer">
-      <ul class="timerOptions">
-        <li>Pomodoro</li>
-        <li>Short Break</li>
-        <li>Long Break</li>
-      </ul>
-      <div class="timer">
-        <p>09:00</p>
+      <div class="timerOptions">
+        <button class="timerOptionsButton buttonSelected"  id="timerOptionsPomodoro">Pomodoro</button>
+        <button class="timerOptionsButton"  id="timerOptionsShortBreak">Short Break</button>
+        <button class="timerOptionsButton"  id="timerOptionsLongBreak">Long Break</button>
+
       </div>
-      <div class="timerStart">
-        <button class="startButton">START</button>
+
+
+      <div class="timer">
+        <p id="timerString">25:00</p>
+      </div>
+      <div class="timerStart" id="imerStart">
+        <button class="startButton  startButton1" id="startButton">START</button>
         <!-- <button>Next</button> -->
       </div>
     </div>
@@ -123,7 +126,7 @@
     </div>
   </div>
 
-  <script src="/src/pages/pomodoro/pomodoroPopups.js"></script>
+  <script src="/src/pages/pomodoro/pomodoroBotones.js"></script>
 </body>
 
 </html>
