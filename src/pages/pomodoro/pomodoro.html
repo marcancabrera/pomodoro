@@ -50,6 +50,92 @@
       </div>
     </div>
   </section>
+<!--<a href="https://imgbb.com/"><img src="https://i.ibb.co/BBjyQJ1/add.png" alt="add" border="0"></a>
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/1KFrG2p/caret-down.png" alt="caret-down" border="0"></a>
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/CJ2HdG3/caret-up.png" alt="caret-up" border="0"></a>
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/ZcBHC2p/edit.png" alt="edit" border="0"></a>
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/Ldxr6gP/menu.png" alt="menu" border="0"></a>-->
+  <section>
+    <div class="taskContent">
+        <div class="taskInfo">
+            <h1 class="taskInfo__e1">Tasks</h1>
+            <button class="taskInfo__e2"><img src="https://i.ibb.co/Ldxr6gP/menu.png" alt="options"></button>
+        </div>
+        <hr>
+        <div class="taskContainer" id="taskContainer">
+
+        <!--<div class="task">
+          <div class="task__head">
+            <span class="task__title">Soy el titulo</span>
+            <div class="task__control">
+              <span class="task__number">soy subtitulo</span>
+              <button class="task__edit"><img src="edit.png" alt="icon"></button>
+            </div>
+
+          </div>
+          <div class="task__note">
+            <span class="task__noteSpan">soy una nota</span>
+          </div>
+        </div>-->
+
+        </div>
+
+        <button class="addTask" onclick="showCreatePom()" id="buttonCreatePom">
+            <img src="https://i.ibb.co/BBjyQJ1/add.png" alt="icon">
+            <p class="addTask__text">Add task</p>
+        </button>
+
+
+        <div  id="createPom" class="createTask">
+
+            <div class="createTask__title">
+                <input type="text" class="createTask__titleInput" placeholder="Que tarea estas realizando?" >
+            </div>
+            <div class="createTask__subtitle">
+                <p>Soy un subtitulo</p>
+            </div>
+            <div class="createTask__countPom">
+                <input type="number" class="createTask__countInput">
+                <button class="createTask__countbutton"><img src="https://i.ibb.co/CJ2HdG3/caret-up.png" alt="" width="10px"></button>
+                <button class="createTask__countbutton"><img src="https://i.ibb.co/1KFrG2p/caret-down.png" alt="" width="10px"></button>
+            </div>
+            <div class="createTask__note">
+              <textarea class="createTask__noteInput" name="text">dsa</textarea><br>
+            </div>
+
+            <button class="createTask__addNote">
+                +Add note
+            </button>
+
+
+
+            <div class="createTask__submit">
+                <button class="createTask__Cancel" onclick="hideCreatePom()">
+                    Cancel
+                </button>
+                <button class="createTask__Save" onclick="addTaskToContainer()">
+                    Save
+                </button>
+            </div>
+        </div>
+
+
+        <div class="stats">
+          <span class="stats__txt1">
+            tareas activas
+          </span>
+          <span class="stats__txt2">
+            0
+          </span>
+          <span class="stats__txt1">
+            acaban a las
+          </span>
+          <span class="stats__txt2">
+            0:00
+          </span>
+        </div>
+    </div>
+  </section>
 
   <div class="infoOverlay" id="infoOverlay">
     <div class="infoPopup" id="infoPopup">
