@@ -1,57 +1,69 @@
+
+var sec, min, time, id, paused;
+sec = 0;
+
+
 var startButton = document.getElementById('startButton'),
     timerString = document.getElementById('timerString');
 
-var sec,min,time,id,paused;
 
-startButton.addEventListener('click',function(){
 
-    var timeS = timerString.innerText;
-    if(id == null){
-        time = parseInt(timeS,10);
-        sec = 0;
-        min = time;
-        id = setInterval(countBack,1000);
-    }else{
-        paused = false;
+
+startButton.addEventListener('click', function () {
+    paused = false;
+    min = parseInt(timerString.innerHTML, 10);
+
+    var opcion = startButton.innerHTML;
+    console.log(opcion);
+    if (opcion == "START") {
+        startButton.innerHTML = "STOP";
+        if (id == null) {
+            id = setInterval(countBack, 1000);
+            console.log(id);
+            console.log("id creado");
+        }
+
+    } else if (opcion == "STOP") {
+        clearInterval(id);
+        id = null;
+        startButton.innerHTML = "START";
     }
 });
 
 
 
 
-function stop(){
-    paused = true;
-    startButton.innerHTML = "START";
 
-}
-
-function countBack(){
-    if(!paused){
+function countBack() {
+    console.log(min);
+    console.log(sec);
+    if (!paused) {
+        console.log("contando");
         write();
-   if(sec > 0){
-       sec--;
-   } else if(min > 0){
-        min --;
-        sec = 59;
-   }else{
-       clearInterval(id);
-       finishedPom(); /////////////////////////////// para los TASKS
-   }
+        if (sec > 0) {
+            sec--;
+        } else if (min > 0) {
+            min--;
+            sec = 59;
+        } else {
+            console.log("limpiando");
+            clearInterval(id);
+        }
     }
 }
 
 
-function write(){
+function write() {
     let secAuxi, minAuxi;
-    if(sec < 10){
+    if (sec < 10) {
         secAuxi = "0" + sec;
-    }else{
+    } else {
         secAuxi = sec;
     }
 
-    if(min < 10){
+    if (min < 10) {
         minAuxi = "0" + min;
-    }else{
+    } else {
         minAuxi = min;
     }
 
