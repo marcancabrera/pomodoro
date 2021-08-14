@@ -5,7 +5,11 @@ var headButtonInfo = document.getElementById('headButtonInfo'),
      authorOverlay = document.getElementById('authorOverlay'),
      authorPopup = document.getElementById('authorPopup'),
      authorPopupCerrar = document.getElementById('authorPopupCerrar'),
-     headButtonAuthor = document.getElementById('headButtonAuthor');
+     headButtonAuthor = document.getElementById('headButtonAuthor'),
+     musicPopup = document.getElementById('musicPopup'),
+     musicPopupCerrar = document.getElementById('musicPopupCerrar'),
+     musicOverlay = document.getElementById('musicOverlay'),
+     headButtonMusic = document.getElementById('headButtonMusic');
 
 
 
@@ -23,4 +27,12 @@ headButtonAuthor.addEventListener('click', function () {
 
 authorPopupCerrar.addEventListener('click', function () {
      authorOverlay.classList.remove('active');
+});
+
+headButtonMusic.addEventListener('click', function () {
+    musicOverlay.classList.add('active');
+});
+
+musicPopupCerrar.addEventListener('click', function () {
+    musicOverlay.classList.remove('active');
 });
