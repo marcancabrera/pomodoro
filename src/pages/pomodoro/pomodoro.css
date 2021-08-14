@@ -223,6 +223,7 @@ button p {
   height: 70%;
   width: 95%;
   padding: 0px 20px;
+<<<<<<< HEAD
 }
 
 .authorPopup footer{
@@ -237,6 +238,22 @@ button p {
   border-radius: 0px 0px 5px 5px;
 }
 
+=======
+}
+
+.authorPopup footer{
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  font-size: 12px;
+  background-color: #f05b56;
+  margin: 100px 0px 0px 0px;
+  padding: 0px ;
+  color: white !important;
+  border-radius: 0px 0px 5px 5px;
+}
+
+>>>>>>> ae521428a0b2f161dfb164f4b942786a04954278
 .authorPopup footer h3{
 
   color: white !important;
