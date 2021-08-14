@@ -49,6 +49,7 @@ header h1 {
 header img {
   font-size: 0px;
   margin: 0px;
+  width: 20px;
 }
 
 header span {
@@ -83,7 +84,7 @@ button p {
 
 /*           POPUPS             */
 
-/*Help*/
+/*Info*/
 
 .infoOverlay {
   background: rgba(0, 0, 0, 0.3);
@@ -96,30 +97,91 @@ button p {
   align-items: center;
   justify-content: center;
   visibility: hidden;
+  color: hsl(357, 12%, 42%);
+  font-size: 18px;
+}
+.infoOverlay h2,h3{
+  color: hsl(356.8, 50%, 22%);
+
+}
+
+.infoOverlay h2{
+  font-size: 34px;
+
+}
+
+.infoOverlay h3{
+  font-size: 25px;
+  margin: 50px 0px 20px 0px;
+}
+
+.infoOverlay li{
+  margin: 12px 0px;
+  line-height: 29px;
+}
+
+.infoOverlay ul li::marker{
+  color: #f59c99;
+}
+
+.infoOverlay a{
+  color: hsl(357, 74%, 67%);
+  text-decoration: none;
+  font-weight: bold;
+
+}
+
+.infoOverlay h3::after {
+  content: '';
+  display: block;
+  margin: 0 ;
+  width: 30px;
+  padding-top: 10px;
+  border-bottom: 4px solid #f05b56;
+  opacity: 0.6;
+}
+
+.infoOverlay p{
+  line-height: 25.6px;
 }
 
 .infoOverlay.active {
   visibility: visible;
 }
 
+.PopupCerrar{
+  cursor: pointer;
+  width: 16px;
+  display: block;
+  float: right;
+  padding: 0;
+  opacity: 0.3;
+  padding: 20px 20px 0px 0px;
+}
+
+.PopupCerrar:hover{
+  opacity: 1.0;
+}
+
 .infoPopup {
   background: #f8f8f8;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
   border-radius: 5px;
-  padding: 20px;
+
   width: 600px;
   height: 600px;
   overflow-y: scroll;
 }
 
-.infoPopupCerrar {
-  font-size: 16px;
-  line-height: 16px;
-  display: block;
-  text-align: right;
+
+
+.infoPopupMain{
+  padding: 30px 20px ;
 }
 
-/*End Help*/
+
+
+/*End Info*/
 
 /*Authors*/
 
@@ -144,30 +206,213 @@ button p {
   background: #f8f8f8;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
   border-radius: 5px;
-  padding: 20px;
+
   width: 600px;
   height: 600px;
+  margin: 0px;
+  padding: 0px ;
+
 }
 
 .authorPopupMain {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  height: 70%;
+  width: 95%;
+  padding: 0px 20px;
+<<<<<<< HEAD
 }
+
+.authorPopup footer{
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  font-size: 12px;
+  background-color: #f05b56;
+  margin: 100px 0px 0px 0px;
+  padding: 0px ;
+  color: white !important;
+  border-radius: 0px 0px 5px 5px;
+}
+
+=======
+}
+
+.authorPopup footer{
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  font-size: 12px;
+  background-color: #f05b56;
+  margin: 100px 0px 0px 0px;
+  padding: 0px ;
+  color: white !important;
+  border-radius: 0px 0px 5px 5px;
+}
+
+>>>>>>> ae521428a0b2f161dfb164f4b942786a04954278
+.authorPopup footer h3{
+
+  color: white !important;
+}
+
+
 
 .authorPopupCerrar {
   font-size: 16px;
   line-height: 16px;
   display: block;
   text-align: right;
+
 }
 
 .author {
-  margin: 0px 50px;
-  text-align: center;
-  height: 80%;
+  margin: 0px 30px;
+  justify-content: center;
+  height: 20%;
+
 }
 
+.author h3{
+  padding-bottom: 10px;
+  border-bottom: 4px solid #f05b56;
+  text-align: center;
+}
+
+.author img{
+  height: 100px;
+  opacity: 0.5;
+}
+
+.author img:hover{
+  opacity: 1;
+}
+
+
+
+
 /*End Authors*/
+
+/*Music*/
+
+.musicOverlay {
+  background: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+}
+
+.musicOverlay.active {
+  visibility: visible;
+}
+
+.musicPopup {
+  background: #f8f8f8;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+
+  width: 600px;
+  height: 600px;
+  margin: 0px;
+  padding: 0px ;
+
+}
+
+.musicPopupMain {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  color: #5dadec;
+  align-items: center;
+  height: 100%;
+  width: 95%;
+  padding: 20px 20px;
+}
+
+
+.musicPopupCerrar {
+  font-size: 16px;
+  line-height: 16px;
+  display: block;
+  text-align: right;
+
+}
+
+.music {
+  margin: 20px 00px;
+  padding: 20px 20px;
+  height: 20%;
+
+  width: 90%;
+  display: flex;
+  border-radius: 40px;
+
+}
+
+.spotify{
+  background-color : rgba(30,215,96, 1);
+}
+
+
+
+.youtube{
+  background-color : rgba(255,0,0, 1);
+}
+
+
+
+.musicMain{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 30px;
+}
+
+.musicMain h3{
+  margin-bottom: 4px;
+  padding-bottom: 4px;
+  border-bottom: 4px solid white;
+  text-align: center;
+  color: white;
+}
+
+.musicMain p{
+  margin-top: 5px;
+  color: white;
+  text-align: center;
+}
+
+.music img{
+  height: 100px;
+  width: 100px;
+  opacity: 0.9;
+
+}
+
+.music a{
+  height: 100px;
+  width: 100px;
+  padding: 10px 0px;
+  margin-left: 30px;
+}
+
+.music img:hover{
+  opacity: 1;
+}
+
+
+
+
+/*End Music*/
 
 /*           END POPSUPS          */
 
