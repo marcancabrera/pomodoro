@@ -694,6 +694,12 @@ input:focus, button:focus, textarea:focus {
   border: 2px solid rgb(171, 171, 171);
   background-color: rgb(171, 171, 171);
 }
+
+.createTask__Save:hover {
+  border: 2px solid var(--color-shadow-grey);
+  background-color: var(--color-shadow-grey);
+}
+
 .taskCard{
   width: 100%;
     background-color: white;
