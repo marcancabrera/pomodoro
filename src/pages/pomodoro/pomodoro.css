@@ -1,7 +1,9 @@
 @import url(/styles/index.css);
+
 body {
   font-family: var(--font-family);
   margin: 0px;
+  padding: 0px;
   color: var(--color-button);
   background-color: var(--background-color-main-1);
   transition: background-color 0.5s linear;
@@ -21,13 +23,17 @@ body {
 
 /*           HEADER             */
 
-header {
+.marginPomodoro {
+  max-width: 620px;
+  padding: 0px 12px;
+  margin: auto;
+}
+
+header .navBar {
   background: inherit;
   height: 60px;
-  width: 620px;
+  width: 100%;
   display: flex;
-  padding: 0px 12px;
-  margin: 0px auto;
   align-items: center;
   justify-content: space-between;
   border-bottom: 0.2px solid rgba(0, 0, 0, 0.3);
@@ -407,8 +413,7 @@ button p {
   margin-block-start: 50px;
   background: rgba(255, 255, 255, 0.1);
   padding: 20px;
-  width: 30%;
-  height: 320px;
+  width: 480px;
   margin-inline: auto;
   box-sizing: border-box;
 }
