@@ -4,6 +4,7 @@ This is a project focus in practice our skills in CSS, HTML5, team work as well.
 
 ## Demo
 [Pomodoro](https://pomodoro-404-not-found.netlify.app/)
+Currently we are using Netlify to deploy our page.
 
 ## Collaborators
 
