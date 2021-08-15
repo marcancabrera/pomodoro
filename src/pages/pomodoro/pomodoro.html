@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Document</title>
+  <title>Pomodoro</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="pomodoro.css">
   <link rel="stylesheet" href="layout.css">
@@ -38,8 +38,8 @@
       <div class="timerComponents">
         <div class="timerOptions">
           <button class="timerOptionsButton buttonSelected"  id="timerOptionsPomodoro">Pomodoro</button>
-          <button class="timerOptionsButton"  id="timerOptionsShortBreak">Short Break</button>
-          <button class="timerOptionsButton"  id="timerOptionsLongBreak">Long Break</button>
+          <button class="timerOptionsButton"  id="timerOptionsShortBreak">Descanso Corto</button>
+          <button class="timerOptionsButton"  id="timerOptionsLongBreak">Descanso Largo</button>
         </div>
         <div class="timer">
           <p id="timerString">25:00</p>
@@ -60,12 +60,12 @@
   <section class="marginPomodoro">
     <div class="taskContent">
       <div class="taskHead">
-        <span>WORKING ON:</span><br><br>
+        <span>TRABAJANDO EN:</span><br><br>
 
         <span id="taskName"></span>
       </div>
         <div class="taskInfo">
-            <h1 class="taskInfo__e1">Tasks</h1>
+            <h1 class="taskInfo__e1">TAREAS</h1>
             <button class="taskInfo__e2"><img src="https://i.ibb.co/Ldxr6gP/menu.png" alt="options"></button>
         </div>
         <div class="taskContainer" id="taskContainer">
@@ -75,7 +75,7 @@
 
         <button class="addTask" onclick="showCreateTask()" id="buttonCreatePom">
             <img src="https://i.ibb.co/BBjyQJ1/add.png" alt="icon">
-            <p class="addTask__text">Add task</p>
+            <p class="addTask__text">Agregar Tarea</p>
         </button>
 
 
@@ -85,7 +85,7 @@
                 <input type="text" class="createTask__titleInput" placeholder="Que tarea estas realizando?"  id="taskTitleInput">
             </div>
             <div class="createTask__subtitle">
-                <p>Pom count</p>
+                <p>Est Pomodoros</p>
             </div>
             <div class="createTask__countPom">
                 <input type="number" class="createTask__countInput" id="pomCount" value="1" min="1">
@@ -97,17 +97,15 @@
             </div>
 
             <button class="createTask__addNote" id="addnotebutton" onclick="showAddNote()">
-                +Add note
+                +Agregar nota
             </button>
-
-
 
             <div class="createTask__submit">
                 <button class="createTask__Cancel" onclick="hideCreateTask()">
-                    Cancel
+                    Cancelar
                 </button>
                 <button class="createTask__Save" onclick="addTask()" id="buttonSaveTask">
-                    Save
+                    Guardar
                 </button>
             </div>
         </div>
