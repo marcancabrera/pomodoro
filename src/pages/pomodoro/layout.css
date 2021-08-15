@@ -7,10 +7,20 @@
   header button {
     width: 35px;
   }
+  .authorPopup footer{
+    visibility: hidden;
+  }
 }
 
 @media screen and (max-width: 680px) {
   .timerContainer .timer{
     font-size: 100px;
   }
+}
+
+@media screen and (max-width: 400px) {
+  .timerComponents .stopButtonContainer {
+    right: -25px;
+  }
+
 }
