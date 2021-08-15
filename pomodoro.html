@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Pomodoro</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./src/utils/pomodoro/pomodoro.css">
+  <link rel="stylesheet" href="./src/utils/pomodoro/layout.css">
+</head>
+
+<body id = "body" class="main-1">
+<header class="marginPomodoro">
+    <div class="navBar">
+      <h1 class="headTitle">
+        <img src="https://i.ibb.co/0h4Nr8R/icon-white.png" alt="simboloCheck">
+        <a class="headTitleA" href="/src/pages/pomodoro/pomodoro.html">Pomofocus</a>
+      </h1>
+      <span>
+        <button id="headButtonAuthor">
+          <img src="https://i.ibb.co/rybbMJX/user-white.png" alt="imageAuthor">
+          <p>Autores</p>
+        </button>
+        <button id="headButtonInfo">
+          <img src="https://i.ibb.co/f9gNPzZ/signo-white.png" alt="imageInfo">
+          <p>¿Como usar?</p>
+        </button>
+        <button id="headButtonMusic">
+          <img src="https://i.ibb.co/56M46Nj/spotify-logo.png" alt="image-unknow">
+          <p>Musica</p>
+        </button>
+    </div>
+    </span>
+  </header>
+
+  <section class="marginPomodoro">
+    <div class="timerContainer">
+      <div class="timerComponents">
+        <div class="timerOptions">
+          <button class="timerOptionsButton buttonSelected"  id="timerOptionsPomodoro">Pomodoro</button>
+          <button class="timerOptionsButton"  id="timerOptionsShortBreak">Descanso Corto</button>
+          <button class="timerOptionsButton"  id="timerOptionsLongBreak">Descanso Largo</button>
+        </div>
+        <div class="timer">
+          <p id="timerString">25:00</p>
+        </div>
+        <div class="timerStart" id="timerStart">
+          <button class="startButton  startButton1" id="startButton">START</button>
+          <div class="stopButtonContainer">
+            <button class="stopButton" id="stopButton"><img src="https://i.ibb.co/hmKVP55/next-white.png" alt=""></button>
+          </div>
+        </div>
+      </div>
+  </section>
+<!--<a href="https://imgbb.com/"><img src="https://i.ibb.co/BBjyQJ1/add.png" alt="add" border="0"></a>
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/1KFrG2p/caret-down.png" alt="caret-down" border="0"></a>
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/CJ2HdG3/caret-up.png" alt="caret-up" border="0"></a>
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/ZcBHC2p/edit.png" alt="edit" border="0"></a>
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/Ldxr6gP/menu.png" alt="menu" border="0"></a>-->
+  <section class="marginPomodoro">
+    <div class="taskContent">
+      <div class="taskHead">
+        <span>TRABAJANDO EN:</span><br><br>
+
+        <span id="taskName"></span>
+      </div>
+        <div class="taskInfo">
+            <h1 class="taskInfo__e1">TAREAS</h1>
+            <button class="taskInfo__e2"><img src="https://i.ibb.co/Ldxr6gP/menu.png" alt="options"></button>
+        </div>
+        <div class="taskContainer" id="taskContainer">
+
+
+        </div>
+
+        <button class="addTask" onclick="showCreateTask()" id="buttonCreatePom">
+            <img src="https://i.ibb.co/BBjyQJ1/add.png" alt="icon">
+            <p class="addTask__text">Agregar Tarea</p>
+        </button>
+
+
+        <div  id="createPom" class="createTask">
+
+            <div class="createTask__title">
+                <input type="text" class="createTask__titleInput" placeholder="Que tarea estas realizando?"  id="taskTitleInput">
+            </div>
+            <div class="createTask__subtitle">
+                <p>Est Pomodoros</p>
+            </div>
+            <div class="createTask__countPom">
+                <input type="number" class="createTask__countInput" id="pomCount" value="1" min="1">
+                <button class="createTask__countbutton" onclick="upCountPom()"><img src="https://i.ibb.co/CJ2HdG3/caret-up.png" alt="" width="10px"></button>
+                <button class="createTask__countbutton" onclick="downCountPom()"><img src="https://i.ibb.co/1KFrG2p/caret-down.png" alt="" width="10px"></button>
+            </div>
+            <div class="createTask__note" id="taskNote">
+              <textarea class="createTask__noteInput" name="text" id="taskNoteInput" placeholder="Alguna nota..."></textarea><br>
+            </div>
+
+            <button class="createTask__addNote" id="addnotebutton" onclick="showAddNote()">
+                +Agregar nota
+            </button>
+
+            <div class="createTask__submit">
+                <button class="createTask__Cancel" onclick="hideCreateTask()">
+                    Cancelar
+                </button>
+                <button class="createTask__Save" onclick="addTask()" id="buttonSaveTask">
+                    Guardar
+                </button>
+            </div>
+        </div>
+
+
+        <div class="stats">
+          <span class="stats__txt1">
+            Est
+          </span>
+          <span class="stats__txt2" id="estText">
+            0
+          </span>
+          <span class="stats__txt1">
+            Act
+          </span>
+          <span class="stats__txt2" id="actText">
+            0:00
+          </span>
+        </div>
+    </div>
+  </section>
+
+  <div class="infoOverlay" id="infoOverlay">
+    <div class="infoPopup" id="infoPopup">
+      <img src="https://i.ibb.co/xsHJLjZ/remove-icon.png" alt="PopupCerrar" class="PopupCerrar" id="infoPopupCerrar">
+      <section class="infoPopupMain">
+        <h2>Un temporizador Pomodoro en línea para aumentar su productividad</h2>
+        <div>
+          <h3>¿Qué es Pomofocus?</h3>
+          <p>
+            Pomofocus es un temporizador pomodoro personalizable que funciona en el navegador de escritorio y móvil. El
+            objetivo de esta aplicación es ayudarlo a concentrarse en cualquier tarea en la que esté trabajando, como
+            estudiar, escribir o codificar. Esta aplicación está inspirada en la <a target="_blank"
+              href="https://letmegooglethat.com/?q=T%C3%A9cnica+Pomodoro">Técnica Pomodoro</a>, que es un método de
+            gestión del tiempo desarrollado por Francesco Cirillo.
+          </p>
+        </div>
+        <div>
+          <h3>¿Qué es la Técnica Pomodoro?</h3>
+          <p>
+            La Técnica Pomodoro es creada por Francesco Cirillo para una forma más productiva de trabajar y estudiar. La
+            técnica utiliza un temporizador para dividir el trabajo en intervalos, tradicionalmente de 25 minutos de
+            duración, separados por breves descansos. Cada intervalo se conoce como pomodoro, de la palabra italiana
+            para 'tomate', en honor al temporizador de cocina en forma de tomate que Cirillo usaba cuando era estudiante
+            universitario. <br> <a href="https://en.wikipedia.org/wiki/Pomodoro_Technique" target="_blank"> -
+              Wikipedia</a>
+          </p>
+        </div>
+        <div>
+          <h3>¿Cómo utilizar el Temporizador Pomodoro?</h3>
+          <ol>
+            <li>Agregue tareas en las que trabajar hoy</li>
+            <li>Establecer pomodoros estimados (1 = 25min de trabajo) para cada tarea</li>
+            <li>Seleccione una tarea para trabajar</li>
+            <li>Inicie el temporizador y concéntrese en la tarea durante 25 minutos</li>
+            <li>Tómate un descanso de 5 minutos cuando suene la alarma.</li>
+            <li>Repite 3-5 hasta que termines las tareas.</li>
+          </ol>
+        </div>
+        <div>
+          <h3>Características</h3>
+          <ul>
+            <li>Diseño receptivo que funciona con computadoras de escritorio y dispositivos móviles</li>
+            <li>Transición de color para cambiar los estados de ánimo entre el tiempo de trabajo y el tiempo de descanso
+            </li>
+            <li>Notificación de audio al final de un período de temporizador</li>
+            <li>Intervalos de temporizador personalizables para adaptarse a sus preferencias</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <div class="authorOverlay" id="authorOverlay">
+    <div class="authorPopup" id="authorPopup">
+      <img class="PopupCerrar" id="authorPopupCerrar" src="https://i.ibb.co/xsHJLjZ/remove-icon.png" alt="PopupCerrar">
+      <section class="authorPopupMain">
+
+        <div class="author">
+          <h3>Gabriel</h3>
+          <a href="https://github.com/GabrielCT19" target="_blank"><img src="https://i.ibb.co/nL3HRZF/github-icon.png"
+              alt="Gabriel"></a>
+        </div>
+
+        <div class="author">
+          <h3>Pablo</h3>
+          <a href="https://github.com/pablodaxmon" target="_blank"><img src="https://i.ibb.co/nL3HRZF/github-icon.png"
+              alt="Pablo"></a>
+        </div>
+
+        <div class="author">
+          <h3>Marcan</h3>
+          <a href="https://github.com/markandeia" target="_blank"><img src="https://i.ibb.co/nL3HRZF/github-icon.png"
+              alt="Marcan"></a>
+        </div>
+
+        <div class="author">
+          <h3>Proyecto</h3>
+          <a href="https://github.com/markandeia/pomodoro" target="_blank"><img
+              src="https://i.ibb.co/nL3HRZF/github-icon.png" alt="Proyecto"></a>
+        </div>
+
+        <div class="author">
+          <h3>Original</h3>
+          <a href="https://pomofocus.io/" target="_blank"><img src="https://i.ibb.co/4shbCns/pomodoro.png"
+              alt="Pomodoro"></a>
+        </div>
+
+      </section>
+
+      <footer>
+        <h3>Copyright 2021 &copy;</h3>
+      </footer>
+    </div>
+  </div>
+
+
+  <div class="musicOverlay" id="musicOverlay">
+    <div class="musicPopup">
+      <img class="PopupCerrar" id="musicPopupCerrar" src="https://i.ibb.co/xsHJLjZ/remove-icon.png" alt="PopupCerrar">
+      <section class="musicPopupMain">
+        <h2>🎵 Listas Recomendadas 🎵</h2>
+        <article class="music spotify">
+          <a href="https://open.spotify.com/playlist/0vvXsWCC9xrXsKd4FyS8kM?si=aaf024c8b7a74f1a " target="_blank"><img src="https://i.ibb.co/56M46Nj/spotify-logo.png" alt="spotify"></a>
+          <section class="musicMain">
+            <h3>Spotify</h3>
+            <p>Lofi hip hop music - beats to relax/study to</p>
+          </section>
+        </article>
+        <article class="music youtube">
+          <a href="https://www.youtube.com/watch?v=-z5zYgA9Xnw"  target="_blank"><img src="https://i.ibb.co/PTvR11y/youtube-logo.png"
+              alt="youtube"></a>
+          <section class="musicMain">
+            <h3>Youtube</h3>
+            <p>Musica para Estudiar y Concentrarse(Live)</p>
+          </section>
+        </article>
+      </section>
+    </div>
+  </div>
+  <script src="./src/utils/pomodoro/pomodoroPopups.js"></script>
+  <script src="./src/utils/pomodoro/pomodoroBotones.js"></script>
+  <script src="./src/utils/pomodoro/pomodoroTimer.js"></script>
+  <script src="./src/utils/pomodoro/pomodoroTasks.js"></script>
+</body>
+
+</html>

@@ -1,12 +1,27 @@
 /* VARIABLES */
 
+@font-face {
+  font-family: 'ArialRounded';
+  font-display: swap;
+  src: url('/assets/fonts/arial-rounded.ttf')
+    format('truetype');
+  }
+
+  @font-face {
+    font-family: 'ArialRounded';
+    font-display: swap;
+    src: url('/assets/fonts/Arial_Rounded_Bold.ttf')
+      format('truetype');
+    font-weight: bold;
+    }
+
 :root {
     --background-color-main-1: #db524d;
     --background-color-main-2: #437ea8;
     --background-color-main-3: #468e91;
     --color-button: #ffffff;
-    --color-dark-shadow: #c84a46;
-    --color-dark-shadow: #be5551;
+    --color-dark-shadow-1: #c84a46;
+    --color-dark-shadow-2: #be5551;
     --color-shadow-button: #ebebeb;
     --color-shadow-grey: #df645f;
     --max-size: 1440px;
