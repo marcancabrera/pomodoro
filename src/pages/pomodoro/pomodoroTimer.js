@@ -35,6 +35,7 @@ function countBack(){
         sec = 59;
    }else{
        clearInterval(id);
+       finishedPom(); /////////////////////////////// para los TASKS
    }
     }
 }
