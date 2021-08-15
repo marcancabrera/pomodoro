@@ -16,15 +16,6 @@ function task(title,pomCountActual, pomCount, note, id){
     this.note = note;
     this.id = id;
 }
-loadData();
-if(tasksList != null){
-    document.getElementById('taskContainer').innerHTML = '';
-    tasksList.forEach(element => {
-        addTaskToContainer(element.title, element.pomCountActual, element.pomCount, element.note, element.id);
-
-
-    });
-}
 
 
 
@@ -81,7 +72,6 @@ function showAddNote(){
     document.getElementById('addnotebutton').style.display = "none";
 }
 
-taskCount = 0;
 
 //añade un task a la lista de tasks, pone en blanco los campos y oculta el creador de tasks
 function addTask(){
@@ -111,8 +101,6 @@ function addTask(){
         saveButton.style.backgroundColor = "rgb(171, 171, 171)";
         saveButton.style.borderColor = "rgb(171, 171, 171)";
         document.getElementById("addnotebutton").style.display = "block";
-        taskCount++;
-        saveData();
     }
 
 
@@ -349,10 +337,9 @@ function saveEditTask(){
     tasksList[taskEditing].pomCount = document.getElementById(taskEditing).querySelector(".createTask__countInput").value;
     tasksList[taskEditing].note = document.getElementById(taskEditing).querySelector(".createTask__noteInput").value;
 
-    saveData();
     console.log(document.getElementById(taskEditing).querySelector(".createTask__titleInput").value);
     document.getElementById(taskEditing).querySelector(".taskContent__title").textContent = document.getElementById(taskEditing).querySelector(".createTask__titleInput").value;
-    document.getElementById(taskEditing).querySelector(".taskContent__subtitle").textContent = document.getElementById(taskEditing).querySelector(".createTask__countInput").value;
+    document.getElementById(taskEditing).querySelector(".taskContent__subtitle").textContent = tasksList[taskEditing].pomCountActual + "/"+ document.getElementById(taskEditing).querySelector(".createTask__countInput").value;
 
     if(document.getElementById(taskEditing).querySelector(".createTask__noteInput").value != ""){
         if(document.getElementById(taskEditing).querySelector(".taskCard__noteP") != null){
@@ -407,8 +394,6 @@ function deleteTask(){
 
     document.getElementById(taskEditing).remove();
 
-    taskCount--;
-    saveData();
 
 
 }
@@ -447,14 +432,3 @@ function finishedPom(){
 }
 
 
-
-function saveData(){
-
-    localStorage.setItem("counttask",taskCount);
-
-}
-
-function loadData(){
-    tasksList = JSON.parse(localStorage.getItem("list"));
-
-}
