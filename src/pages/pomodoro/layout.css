@@ -8,3 +8,9 @@
     width: 35px;
   }
 }
+
+@media screen and (max-width: 680px) {
+  .timerContainer .timer{
+    font-size: 100px;
+  }
+}
