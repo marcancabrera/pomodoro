@@ -5,20 +5,20 @@ body {
   margin: 0px;
   padding: 0px;
   color: var(--color-button);
-  background-color: var(--background-color-main-1);
+  background-color: var(--background-color-main-2);
   transition: background-color 0.5s linear;
 }
 
 .main-1 {
-  background-color: var(--background-color-main-1);
-}
-
-.main-2 {
   background-color: var(--background-color-main-2);
 }
 
-.main-3 {
+.main-2 {
   background-color: var(--background-color-main-3);
+}
+
+.main-3 {
+  background-color: var(--background-color-main-1);
 }
 
 /*           HEADER             */
@@ -471,15 +471,15 @@ button p {
 }
 
 .timerComponents .timerStart .startButton1 {
-  color: var(--background-color-main-1);
-}
-
-.timerComponents .timerStart .startButton2 {
   color: var(--background-color-main-2);
 }
 
-.timerComponents .timerStart .startButton3 {
+.timerComponents .timerStart .startButton2 {
   color: var(--background-color-main-3);
+}
+
+.timerComponents .timerStart .startButton3 {
+  color: var(--background-color-main-1);
 }
 
 .timerComponents .timerStart .stopButton {
