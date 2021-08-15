@@ -3,67 +3,69 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Document</title>
+  <title>Pomodoro</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="pomodoro.css">
-
+  <link rel="stylesheet" href="layout.css">
 </head>
 
 <body id = "body" class="main-1">
-  <header>
-    <h1 class="headTitle">
-      <img src="https://i.ibb.co/0h4Nr8R/icon-white.png" alt="simboloCheck">
-      <a class="headTitleA" href="/src/pages/pomodoro/pomodoro.html">Pomofocus</a>
-    </h1>
-    <span>
-      <button class="headButtonAuthor" id="headButtonAuthor">
-        <img src="https://i.ibb.co/rybbMJX/user-white.png" alt="imageAuthor">
-        <p>Autores</p>
-      </button>
-      <button class="headButtonInfo" id="headButtonInfo">
-
-        <img src="https://i.ibb.co/f9gNPzZ/signo-white.png" alt="imageInfo">
-        <p class="">¿Como usar?</p>
-      </button>
-      <button class="headButtonMusic" id="headButtonMusic">
-        <img src="https://i.ibb.co/56M46Nj/spotify-logo.png" alt="image-unknow">
-        Musica
-      </button>
+<header class="marginPomodoro">
+    <div class="navBar">
+      <h1 class="headTitle">
+        <img src="https://i.ibb.co/0h4Nr8R/icon-white.png" alt="simboloCheck">
+        <a class="headTitleA" href="/src/pages/pomodoro/pomodoro.html">Pomofocus</a>
+      </h1>
+      <span>
+        <button id="headButtonAuthor">
+          <img src="https://i.ibb.co/rybbMJX/user-white.png" alt="imageAuthor">
+          <p>Autores</p>
+        </button>
+        <button id="headButtonInfo">
+          <img src="https://i.ibb.co/f9gNPzZ/signo-white.png" alt="imageInfo">
+          <p>¿Como usar?</p>
+        </button>
+        <button id="headButtonMusic">
+          <img src="https://i.ibb.co/56M46Nj/spotify-logo.png" alt="image-unknow">
+          <p>Musica</p>
+        </button>
+    </div>
     </span>
   </header>
 
-  <section>
+  <section class="marginPomodoro">
     <div class="timerContainer">
-      <div class="timerOptions">
-        <button class="timerOptionsButton buttonSelected"  id="timerOptionsPomodoro">Pomodoro</button>
-        <button class="timerOptionsButton"  id="timerOptionsShortBreak">Short Break</button>
-        <button class="timerOptionsButton"  id="timerOptionsLongBreak">Long Break</button>
-
+      <div class="timerComponents">
+        <div class="timerOptions">
+          <button class="timerOptionsButton buttonSelected"  id="timerOptionsPomodoro">Pomodoro</button>
+          <button class="timerOptionsButton"  id="timerOptionsShortBreak">Descanso Corto</button>
+          <button class="timerOptionsButton"  id="timerOptionsLongBreak">Descanso Largo</button>
+        </div>
+        <div class="timer">
+          <p id="timerString">25:00</p>
+        </div>
+        <div class="timerStart" id="timerStart">
+          <button class="startButton  startButton1" id="startButton">START</button>
+          <div class="stopButtonContainer">
+            <button class="stopButton" id="stopButton"><img src="https://i.ibb.co/hmKVP55/next-white.png" alt=""></button>
+          </div>
+        </div>
       </div>
-
-
-      <div class="timer">
-        <p id="timerString">25:00</p>
-      </div>
-      <div class="timerStart" id="timerStart">
-        <button class="startButton  startButton1" id="startButton">START</button>
-        <button class="stopButton" id="stopButton"><img src="https://i.ibb.co/hmKVP55/next-white.png" alt=""></button>
-      </div>
-    </div>
   </section>
 <!--<a href="https://imgbb.com/"><img src="https://i.ibb.co/BBjyQJ1/add.png" alt="add" border="0"></a>
 <a href="https://imgbb.com/"><img src="https://i.ibb.co/1KFrG2p/caret-down.png" alt="caret-down" border="0"></a>
 <a href="https://imgbb.com/"><img src="https://i.ibb.co/CJ2HdG3/caret-up.png" alt="caret-up" border="0"></a>
 <a href="https://imgbb.com/"><img src="https://i.ibb.co/ZcBHC2p/edit.png" alt="edit" border="0"></a>
 <a href="https://imgbb.com/"><img src="https://i.ibb.co/Ldxr6gP/menu.png" alt="menu" border="0"></a>-->
-  <section>
+  <section class="marginPomodoro">
     <div class="taskContent">
       <div class="taskHead">
-        <span>WORKING ON:</span><br><br>
+        <span>TRABAJANDO EN:</span><br><br>
 
         <span id="taskName"></span>
       </div>
         <div class="taskInfo">
-            <h1 class="taskInfo__e1">Tasks</h1>
+            <h1 class="taskInfo__e1">TAREAS</h1>
             <button class="taskInfo__e2"><img src="https://i.ibb.co/Ldxr6gP/menu.png" alt="options"></button>
         </div>
         <div class="taskContainer" id="taskContainer">
@@ -73,7 +75,7 @@
 
         <button class="addTask" onclick="showCreateTask()" id="buttonCreatePom">
             <img src="https://i.ibb.co/BBjyQJ1/add.png" alt="icon">
-            <p class="addTask__text">Add task</p>
+            <p class="addTask__text">Agregar Tarea</p>
         </button>
 
 
@@ -83,7 +85,7 @@
                 <input type="text" class="createTask__titleInput" placeholder="Que tarea estas realizando?"  id="taskTitleInput">
             </div>
             <div class="createTask__subtitle">
-                <p>Pom count</p>
+                <p>Est Pomodoros</p>
             </div>
             <div class="createTask__countPom">
                 <input type="number" class="createTask__countInput" id="pomCount" value="1" min="1">
@@ -95,17 +97,15 @@
             </div>
 
             <button class="createTask__addNote" id="addnotebutton" onclick="showAddNote()">
-                +Add note
+                +Agregar nota
             </button>
-
-
 
             <div class="createTask__submit">
                 <button class="createTask__Cancel" onclick="hideCreateTask()">
-                    Cancel
+                    Cancelar
                 </button>
                 <button class="createTask__Save" onclick="addTask()" id="buttonSaveTask">
-                    Save
+                    Guardar
                 </button>
             </div>
         </div>
